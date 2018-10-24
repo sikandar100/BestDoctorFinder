@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.BDF.Add_Department">
+
+    <Spinner
+        android:id="@+id/spinnerHospitalList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView7"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="70dp"
+        android:layout_toStartOf="@+id/ClearBtn" />
+
+    <EditText
+        android:id="@+id/DepartmentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/spinnerHospitalList"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Department Name"
+        android:text="" />
+
+    <Button
+        android:id="@+id/SubmitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/DepartmentName"
+        android:layout_below="@+id/DepartmentName"
+        android:layout_marginTop="71dp"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/ClearBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/SubmitBtn"
+        android:layout_alignBottom="@+id/SubmitBtn"
+        android:layout_alignEnd="@+id/DepartmentName"
+        android:text="Clear" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/SubmitBtn"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="51dp"
+        android:text="Details:"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@mipmap/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/Search_Docs"
+            android:icon="@mipmap/search"
+            android:title="Search Doctors" />
+        <item
+            android:id="@+id/View_Request_List"
+            android:icon="@mipmap/list"
+            android:title="View Your Requests" />
+        <item
+            android:id="@+id/Change_Password"
+            android:icon="@mipmap/changepass"
+            android:title="Change Password" />
+        <item
+            android:id="@+id/About_Us"
+            android:icon="@mipmap/profile"
+            android:title="About Us" />
+        <item
+            android:id="@+id/Contact_Us"
+            android:icon="@mipmap/contact_us"
+            android:title="Contact Us" />
+        <item
+            android:id="@+id/LogOut"
+            android:icon="@mipmap/logout"
+            android:title="LogOut" />
+    </group>
+
+
+</menu>

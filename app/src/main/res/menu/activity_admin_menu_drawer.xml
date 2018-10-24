@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@mipmap/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/Add_Hospital"
+            android:icon="@mipmap/add"
+            android:title="Add Hospital" />
+        <item
+            android:id="@+id/Delete_Hospital"
+            android:icon="@mipmap/delete"
+            android:title="Delete Hospital" />
+        <item
+            android:id="@+id/Add_Dept"
+            android:icon="@mipmap/add"
+            android:title="Add Department" />
+        <item
+            android:id="@+id/Delete_Dept"
+            android:icon="@mipmap/delete"
+            android:title="Delete Department" />
+        <item
+            android:id="@+id/Add_Doc"
+            android:icon="@mipmap/add"
+            android:title="Add Doctor" />
+        <item
+            android:id="@+id/Delete_Doc"
+            android:icon="@mipmap/delete"
+            android:title="Delete Doctor" />
+        <item
+            android:id="@+id/Delete_Block_User"
+            android:icon="@mipmap/block"
+            android:title="Delete User" />
+        <item
+            android:id="@+id/Change_Password"
+            android:icon="@mipmap/changepass"
+            android:title="Change Password" />
+        <item
+            android:id="@+id/LogOut"
+            android:icon="@mipmap/logout"
+            android:title="LogOut" />
+    </group>
+
+
+</menu>

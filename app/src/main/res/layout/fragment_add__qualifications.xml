@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.BDF.Add_Qualifications">
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="34dp"
+        android:text="Add Your Qualifications:"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinnerDegrees"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_above="@+id/instituteName"
+       android:layout_alignStart="@+id/ClearallBtn"
+        android:layout_alignEnd="@+id/instituteName"
+        android:layout_marginBottom="53dp" />
+
+    <EditText
+        android:id="@+id/instituteName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Institute Name"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <Button
+        android:id="@+id/AddInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/instituteName"
+        android:layout_below="@+id/instituteName"
+        android:layout_marginTop="65dp"
+        android:text="Add" />
+
+    <Button
+        android:id="@+id/ClearallBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/AddInfo"
+        android:layout_alignBottom="@+id/AddInfo"
+        android:layout_alignEnd="@+id/instituteName"
+        android:text="Clear" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spinnerDegrees"
+        android:layout_alignStart="@+id/instituteName"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:text="Select degree:" />
+
+
+</RelativeLayout>

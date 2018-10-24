@@ -1,0 +1,314 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.BDF.ViewDocProfile">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fillViewport="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="32dp"
+                android:text="Profile Picture"
+                android:textColor="@color/background_color"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/DocPic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignStart="@+id/textView25"
+                android:layout_below="@+id/textView25"
+                android:layout_marginTop="11dp"
+                android:src="@color/white_greyish" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/DocPic"
+                android:layout_centerHorizontal="true"
+                android:text="Name:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/DocName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView26"
+                android:layout_marginStart="13dp"
+                android:layout_toEndOf="@+id/textView26"
+                android:text=""
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/DocPic"
+                android:layout_alignStart="@+id/textView26"
+                android:text="City:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cityLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView28"
+                android:layout_marginStart="13dp"
+                android:layout_toEndOf="@+id/textView26"
+                android:text=""
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/DocPic"
+                android:layout_below="@+id/DocPic"
+                android:layout_marginTop="17dp"
+                android:text="Contact Info:"
+                android:textColor="@color/background_color"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView30"
+                android:layout_below="@+id/textView30"
+                android:layout_marginTop="21dp"
+                android:text="Email:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/DocEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView31"
+                android:layout_alignBottom="@+id/textView31"
+                android:layout_alignStart="@+id/textView28"
+                android:text=""
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView31"
+                android:layout_below="@+id/DocEmail"
+                android:layout_marginTop="25dp"
+                android:text="Office #:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ContactNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView33"
+                android:layout_alignBottom="@+id/textView33"
+                android:layout_alignStart="@+id/textView28"
+                android:text=""
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView33"
+                android:layout_below="@+id/textView33"
+                android:layout_marginTop="15dp"
+                android:text="Qualification/Degrees:"
+                android:textColor="@color/background_color"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView35"
+                android:layout_below="@+id/textView35"
+                android:layout_marginTop="17dp"
+                android:text="Degree Names:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/degreesName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView36"
+                android:layout_alignStart="@+id/textView28"
+                android:text=""
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView36"
+                android:layout_below="@+id/textView36"
+                android:layout_marginTop="33dp"
+                android:text="Institutes:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/InsNames"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView38"
+                android:layout_alignStart="@+id/textView28"
+                android:text=""
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView38"
+                android:layout_below="@+id/textView38"
+                android:layout_marginTop="28dp"
+                android:text="Other Information:"
+                android:textColor="@color/background_color"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView40"
+                android:layout_below="@+id/textView40"
+                android:layout_marginTop="32dp"
+                android:text="Hospital Names:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/HospitalNamesList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView41"
+                android:layout_alignStart="@+id/ContactNo"
+                android:text=""
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView41"
+                android:layout_below="@+id/textView41"
+                android:layout_marginTop="36dp"
+                android:text="Accordingly Timings:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TimingsList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView43"
+                android:layout_alignStart="@+id/HospitalNamesList"
+                android:layout_marginStart="25dp"
+                android:text=""
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView43"
+                android:layout_below="@+id/textView43"
+                android:layout_marginTop="31dp"
+                android:text="Accordingly Checkup Fee:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/FeeList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView45"
+                android:layout_marginStart="57dp"
+                android:layout_alignStart="@+id/HospitalNamesList"
+                android:text=""
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textView47"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView45"
+                android:layout_below="@+id/textView45"
+                android:layout_marginTop="22dp"
+                android:text="Departments:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/DepartmentsList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView47"
+                android:layout_alignStart="@+id/TimingsList"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView26"
+                android:layout_alignStart="@id/textView26"
+                android:layout_marginTop="11dp"
+                android:textStyle="bold"
+                android:text="Rating:" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView12"
+                android:layout_alignStart="@id/textView26"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:text="RatedBy:" />
+
+            <TextView
+                android:id="@+id/Rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView12"
+                android:layout_marginStart="13dp"
+                android:textStyle="italic"
+                android:layout_toEndOf="@+id/textView13"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/RatedBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView13"
+                android:layout_alignStart="@+id/Rating"
+                android:textStyle="italic"
+                android:text="" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

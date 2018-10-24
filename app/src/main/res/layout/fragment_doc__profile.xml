@@ -1,0 +1,217 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.BDF.Doc_Profile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fillViewport="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="29dp"
+        android:text="Add your Profile Details:"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ImgSelection"
+        android:layout_alignBottom="@+id/ImgSelection"
+        android:layout_alignStart="@+id/textView10"
+        android:text="Select Profile Picture:"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ImgSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView10"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="13dp"
+        android:layout_toEndOf="@+id/textView14"
+        android:text="Upload" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView14"
+        android:layout_below="@+id/ImgSelection"
+        android:layout_marginTop="16dp"
+        android:text="Note: Picture Size Should be Less than 64KB" />
+
+    <EditText
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView15"
+        android:layout_below="@+id/textView15"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Describe Your Work/Role"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/chkFee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/desc"
+        android:layout_below="@+id/desc"
+        android:ems="10"
+        android:hint="Check Up Fee"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView15"
+        android:layout_below="@+id/chkFee"
+        android:layout_marginTop="19dp"
+        android:textStyle="bold"
+        android:text="Working Hours From:" />
+
+    <EditText
+        android:id="@+id/HrsFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView16"
+        android:layout_alignBottom="@+id/textView16"
+        android:layout_toStartOf="@+id/ImgSelection"
+        android:ems="2"
+        android:inputType="time"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/HrsFrom"
+        android:layout_alignBottom="@+id/HrsFrom"
+        android:layout_alignStart="@+id/ImgSelection"
+        android:text=":"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/MinFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView17"
+        android:layout_alignBottom="@+id/textView17"
+        android:layout_alignEnd="@+id/textView15"
+        android:ems="2"
+        android:inputType="time" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView16"
+        android:layout_below="@+id/HrsFrom"
+        android:layout_marginTop="21dp"
+        android:textStyle="bold"
+        android:text="Working Hours To:" />
+
+    <EditText
+        android:id="@+id/HrsTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView18"
+        android:layout_alignBottom="@+id/textView18"
+        android:layout_alignStart="@+id/HrsFrom"
+        android:ems="2"
+        android:inputType="time" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView17"
+        android:layout_alignTop="@+id/textView18"
+        android:textStyle="bold"
+        android:text=":" />
+
+    <EditText
+        android:id="@+id/MinTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/MinFrom"
+        android:layout_alignTop="@+id/HrsTo"
+        android:ems="2"
+        android:inputType="time" />
+
+    <Spinner
+        android:id="@+id/spinnerHospitalSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/HrsTo"
+        android:layout_alignEnd="@id/MinTo"
+        android:layout_below="@+id/MinTo"
+        android:layout_marginTop="17dp" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spinnerHospitalSelect"
+        android:layout_alignStart="@+id/textView18"
+        android:textStyle="bold"
+        android:text="Select Hospital:" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView20"
+        android:layout_below="@+id/textView20"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:text="Select Department:" />
+
+    <Spinner
+        android:id="@+id/spinnerDepartmentSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/HrsTo"
+        android:layout_alignEnd="@id/MinTo"
+        android:layout_alignTop="@+id/textView21" />
+
+    <Button
+        android:id="@+id/SubmitForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView21"
+        android:layout_below="@+id/spinnerDepartmentSelect"
+        android:text="Add" />
+
+    <Button
+        android:id="@+id/ClearForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/chkFee"
+        android:layout_below="@+id/spinnerDepartmentSelect"
+        android:text="Clear" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

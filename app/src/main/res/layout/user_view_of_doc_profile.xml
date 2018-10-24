@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drListContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/nameTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Name:" />
+
+    <TextView
+        android:id="@+id/emailTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/nameTag"
+        android:layout_below="@+id/nameTag"
+        android:textStyle="bold"
+        android:layout_marginTop="18dp"
+        android:text="Email:" />
+
+    <TextView
+        android:id="@+id/ratingTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/emailTag"
+        android:layout_below="@+id/emailTag"
+        android:textStyle="bold"
+        android:layout_marginTop="18dp"
+        android:text="Rating:" />
+
+    <TextView
+        android:id="@+id/ratedByTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ratingTag"
+        android:layout_below="@+id/ratingTag"
+        android:textStyle="bold"
+        android:layout_marginTop="18dp"
+        android:text="Users Rated:" />
+
+    <TextView
+        android:id="@+id/checkupfeeTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ratedByTag"
+        android:layout_below="@+id/ratedByTag"
+        android:textStyle="bold"
+        android:layout_marginTop="18dp"
+        android:text="Check Up Fee:" />
+
+    <TextView
+        android:id="@+id/wrkinghoursTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/checkupfeeTag"
+        android:layout_below="@+id/checkupfeeTag"
+        android:textStyle="bold"
+        android:layout_marginTop="18dp"
+        android:text="Working Hours" />
+
+    <TextView
+        android:id="@+id/nameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/nameTag"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/wrkinghoursTag"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/emailTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/nameTxt"
+        android:layout_alignTop="@+id/emailTag"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/ratingTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/emailTxt"
+        android:layout_alignTop="@+id/ratingTag"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/ratedByTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ratingTxt"
+        android:layout_alignTop="@+id/ratedByTag"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/checkupfeeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ratedByTxt"
+        android:layout_alignTop="@+id/checkupfeeTag"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/workinghrsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/checkupfeeTxt"
+        android:layout_alignTop="@+id/wrkinghoursTag"
+        android:text="" />
+
+    <Button
+        android:id="@+id/requestBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/workinghrsTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Request Treatment to This Doctor"
+        android:layout_marginBottom="5dp"/>
+
+
+</RelativeLayout>

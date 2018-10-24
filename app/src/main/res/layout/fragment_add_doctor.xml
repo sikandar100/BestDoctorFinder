@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.BDF.AddDoctor">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="28dp"
+        android:text="Details:"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/fullnamedoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Full Name"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/Emaildoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/fullnamedoc"
+        android:layout_below="@+id/fullnamedoc"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Email"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/mobileDoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/Emaildoc"
+        android:layout_below="@+id/Emaildoc"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Mobile Number"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/locationCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/mobileDoc"
+        android:layout_below="@+id/mobileDoc"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="City"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/passwordDoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/locationCity"
+        android:layout_below="@+id/locationCity"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:text="" />
+
+    <Button
+        android:id="@+id/submitDoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/passwordDoc"
+        android:layout_below="@+id/passwordDoc"
+        android:layout_marginTop="28dp"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/clearAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/submitDoc"
+        android:layout_alignBottom="@+id/submitDoc"
+        android:layout_alignEnd="@+id/passwordDoc"
+        android:text="Clear" />
+</RelativeLayout>

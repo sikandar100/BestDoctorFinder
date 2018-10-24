@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@mipmap/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/Patients_Requests"
+            android:icon="@mipmap/requests"
+            android:title="Patients Requests" />
+        <item
+            android:id="@+id/Patients_List"
+            android:icon="@mipmap/list"
+            android:title="Patients List" />
+        <item
+            android:id="@+id/View_Profile"
+            android:icon="@mipmap/view_profile"
+            android:title="View Profile" />
+        <item
+            android:id="@+id/Add_Profile"
+            android:icon="@mipmap/add"
+            android:title="ADD Profile" />
+        <item
+            android:id="@+id/Delete_Profile"
+            android:icon="@mipmap/delete"
+            android:title="Delete Profile" />
+        <item
+            android:id="@+id/Add_Qualifications"
+            android:icon="@mipmap/add"
+            android:title="Add Qualifications" />
+        <item
+            android:id="@+id/Change_Password"
+            android:icon="@mipmap/changepass"
+            android:title="Change Password" />
+        <item
+            android:id="@+id/About_Us"
+            android:icon="@mipmap/profile"
+            android:title="About Us" />
+
+        <item
+            android:id="@+id/Contact_Us"
+            android:icon="@mipmap/contact_us"
+            android:title="Contact Us" />
+        <item
+            android:id="@+id/LogOut"
+            android:icon="@mipmap/logout"
+            android:title="LogOut" />
+    </group>
+
+</menu>

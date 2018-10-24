@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.BDF.Welcome">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="51dp"
+        android:text="About Us"
+        android:textAlignment="center"
+        android:textColorLink="@android:color/black"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="35dp"
+        android:text="I am a Student of Quaid-i-azam University "
+        android:textAlignment="center"
+        android:textColorLink="@android:color/black"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="This is My final year Project of Msc Computer Science. Which is supervised by Dr. Ghazanfar. To know About supervioser Kindly Follow the link: http://cs.qau.edu.pk/profiles/ghazanfar.htm"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentEnd="true" />
+
+
+
+</RelativeLayout>

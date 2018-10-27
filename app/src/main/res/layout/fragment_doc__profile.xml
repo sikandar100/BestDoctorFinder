@@ -212,6 +212,14 @@
         android:layout_below="@+id/spinnerDepartmentSelect"
         android:text="Clear" />
 
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView16"
+                android:layout_below="@+id/chkFee"
+                android:text="Put Time in 24 Hrs Format:" />
+
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

@@ -3,7 +3,9 @@ package com.example.dell.BDF;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -44,6 +46,7 @@ public class Patients_List extends Fragment {
     private static final String URL_FOR_Send_TreatmentResponce = Ip + "/BestDoctorFinder/TreatmentResponce.php";
     private static final String URL_FOR_All_Patients_in_treatment_list = Ip + "/BestDoctorFinder/FetchPatientsList.php";
     ProgressDialog progressDialog;
+    private SharedPreferences preferences;
 
     private EditText etSearch;
     private ListView lvPersons;
@@ -98,6 +101,8 @@ public class Patients_List extends Fragment {
 
         progressDialog.setMessage("Working! Plz Wait ...");
         showDialog();
+        preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        final String Did = preferences.getString("UserId","NotAny");
 
         StringRequest strReq = new StringRequest(Request.Method.POST,
                 URL_FOR_All_Patients_in_treatment_list, new Response.Listener<String>() {
@@ -148,6 +153,7 @@ public class Patients_List extends Fragment {
                 // Posting params to register url
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("status", "2");
+                params.put("Did",Did);
                 return params;
             }
         };
@@ -311,6 +317,8 @@ public class Patients_List extends Fragment {
 
         progressDialog.setMessage("Working Plz Wait ...");
         showDialog();
+        preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        final String Did = preferences.getString("UserId","NotAny");
 
         StringRequest strReq = new StringRequest(Request.Method.POST,
                 URL_FOR_Send_TreatmentResponce, new Response.Listener<String>() {
@@ -358,6 +366,7 @@ public class Patients_List extends Fragment {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("email", email);
                 params.put("status", status);
+                params.put("Did",Did);
 
                 return params;
             }

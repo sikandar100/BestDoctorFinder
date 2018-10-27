@@ -81,6 +81,7 @@ public class ViewDocProfile extends Fragment {
         DocPic = (ImageView)view.findViewById(R.id.DocPic);
 
 
+
         preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
         String UID = preferences.getString("UserId","NotAny");
         FetchProfileData(UID);
@@ -108,55 +109,69 @@ public class ViewDocProfile extends Fragment {
                     boolean error = jObj.getBoolean("error");
                     if (!error) {
                         String Dname = jObj.getString("name");
-                        DocName.setText(Dname);
+                        if(!Dname.isEmpty())
+                            DocName.setText(Dname);
                         String Demail = jObj.getString("email");
-                        DocEmail.setText(Demail);
+                        if(!Demail.isEmpty())
+                            DocEmail.setText(Demail);
                         String Contact = jObj.getString("mobile");
-                        ContactNo.setText(Contact);
+                        if(!Contact.isEmpty())
+                            ContactNo.setText(Contact);
                         String City = jObj.getString("location");
-                        cityLocation.setText(City);
+                        if(!City.isEmpty())
+                            cityLocation.setText(City);
                         String rating = jObj.getString("Rating");
-                        Rating.setText(rating);
+                        if(!rating.equals("0"))
+                            Rating.setText(rating);
+                        else
+                            Rating.setText("0");
                         String ratedBy = jObj.getString("noOfUserRated");
-                        RatedBy.setText(ratedBy);
+                        if(!ratedBy.equals("0"))
+                            RatedBy.setText(ratedBy);
+                        else
+                            RatedBy.setText("0");
                         String Picture = jObj.getString("pic");
-                        //-----------------------Image Displaying ---------------------
-                        byte[] decodedByte = Base64.decode(Picture, Base64.DEFAULT);
-                        Bitmap bitmap = BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length);
-                        DocPic.setImageBitmap(bitmap);
-                        //-------------------------------------------------------------
+                        if (!Picture.isEmpty()) {
+                            //-----------------------Image Displaying ---------------------
+                            byte[] decodedByte = Base64.decode(Picture, Base64.DEFAULT);
+                            Bitmap bitmap = BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length);
+                            DocPic.setImageBitmap(bitmap);
+                            //-------------------------------------------------------------
+                        }
                         JSONArray AllHospitals = jObj.getJSONArray("hospitals");
-                        for (int i = 0; i < AllHospitals.length(); i++) {
-                            JSONObject innerJObject = AllHospitals.getJSONObject(i);
-                            String Hname = innerJObject.getString("name");
-                            AllHospitalsName += Hname +"  |  ";
-                            String fee = innerJObject.getString("fee");
-                            AllFeeList +=  fee + "  |  ";
-                            String HoursFrom = innerJObject.getString("HoursFrom");
-                            HoursFrom = HoursFrom.substring(0, 5);
-                            String HoursTo = innerJObject.getString("HoursTo");
-                            HoursTo = HoursTo.substring(0, 5);
-                            String Timingeach = HoursFrom + " To "+ HoursTo;
-                            TotalTimings += Timingeach +"  |  ";
-                            String department = innerJObject.getString("department");
-                            AllDepartsName += department + "  |  ";
-                        }
-                        JSONArray qualifications = jObj.getJSONArray("degrees");
-                        for (int i = 0; i < qualifications.length(); i++) {
-                            JSONObject innerJObject = qualifications.getJSONObject(i);
-                            String Dedreename = innerJObject.getString("name");
-                            AllDegrees += Dedreename + "  ,  ";
-                            String inst = innerJObject.getString("institute");
-                            AllIns += inst + "  |  ";
+                        if (AllHospitals.length()>0) {
+                            for (int i = 0; i < AllHospitals.length(); i++) {
+                                JSONObject innerJObject = AllHospitals.getJSONObject(i);
+                                String Hname = innerJObject.getString("name");
+                                AllHospitalsName += Hname + "  |  ";
+                                String fee = innerJObject.getString("fee");
+                                AllFeeList += fee + "  |  ";
+                                String HoursFrom = innerJObject.getString("HoursFrom");
+                                HoursFrom = HoursFrom.substring(0, 5);
+                                String HoursTo = innerJObject.getString("HoursTo");
+                                HoursTo = HoursTo.substring(0, 5);
+                                String Timingeach = HoursFrom + " To " + HoursTo;
+                                TotalTimings += Timingeach + "  |  ";
+                                String department = innerJObject.getString("department");
+                                AllDepartsName += department + "  |  ";
+                            }
+                            JSONArray qualifications = jObj.getJSONArray("degrees");
+                            for (int i = 0; i < qualifications.length(); i++) {
+                                JSONObject innerJObject = qualifications.getJSONObject(i);
+                                String Dedreename = innerJObject.getString("name");
+                                AllDegrees += Dedreename + "  ,  ";
+                                String inst = innerJObject.getString("institute");
+                                AllIns += inst + "  |  ";
 
-                        }
-                        degreesName.setText(AllDegrees);
-                        InsNames.setText(AllIns);
+                            }
+                            degreesName.setText(AllDegrees);
+                            InsNames.setText(AllIns);
 
-                        HospitalNamesList.setText(AllHospitalsName);
-                        FeeList.setText(AllFeeList);
-                        TimingsList.setText(TotalTimings);
-                        DepartList.setText(AllDepartsName);
+                            HospitalNamesList.setText(AllHospitalsName);
+                            FeeList.setText(AllFeeList);
+                            TimingsList.setText(TotalTimings);
+                            DepartList.setText(AllDepartsName);
+                        }
 
                     } else {
 

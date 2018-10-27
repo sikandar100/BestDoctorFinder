@@ -329,6 +329,8 @@ public class Patient_Requests extends Fragment {
 
         progressDialog.setMessage("Working Plz Wait ...");
         showDialog();
+        preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        final String Did = preferences.getString("UserId","NotAny");
 
         StringRequest strReq = new StringRequest(Request.Method.POST,
                 URL_FOR_Send_Result, new Response.Listener<String>() {
@@ -376,6 +378,7 @@ public class Patient_Requests extends Fragment {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("email", email);
                 params.put("status", status);
+                params.put("Did",Did);
 
                 return params;
             }

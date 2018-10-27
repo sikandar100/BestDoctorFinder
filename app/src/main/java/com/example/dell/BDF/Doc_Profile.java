@@ -217,8 +217,8 @@ public class Doc_Profile extends Fragment {
                 Log.d(TAG, "NameCheck: "+ ImgName);
                 String timeFrom = getHrsFrom+":"+getMinFrom;
                 String timeTo=getHrsTo+":"+getMinTo;
-                String Hname = HospitalSelected.getSelectedItem().toString();
-                String Dname = DepartmentSelected.getSelectedItem().toString();
+                String Hname = HospitalSelected.getSelectedItem().toString().trim();
+                String Dname = DepartmentSelected.getSelectedItem().toString().trim();
                 //------------------------------Server call-------------------------------------
                 AddProfile(EncodedImage,ImgName,getchkUpFee,getdesc,timeFrom,timeTo,UID,Hname,Dname);
             }
@@ -288,6 +288,8 @@ public class Doc_Profile extends Fragment {
                 params.put("Dname", Dname);
                 return params;
             }
+
+
         };
         // Adding request to request queue
         AppSingleton.getInstance(getContext()).addToRequestQueue(strReq, cancel_req_tag);

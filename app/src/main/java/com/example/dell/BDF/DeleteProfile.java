@@ -5,7 +5,9 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -46,6 +48,7 @@ public class DeleteProfile extends Fragment {
     private static final String URL_FOR_Deleting_Profile = Ip+"/BestDoctorFinder/DeleteProfile.php";
     private static final String URL_FOR_All_Profiles_fetch = Ip+"/BestDoctorFinder/AllProfilesFetch.php";
     ProgressDialog progressDialog;
+    private SharedPreferences preferences;
 
     private EditText etSearch;
     private ListView lvProfile;
@@ -101,7 +104,8 @@ public class DeleteProfile extends Fragment {
 
         progressDialog.setMessage("Working! Plz Wait ...");
         showDialog();
-
+        preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        final String UserId = preferences.getString("UserId","NotAny");
         StringRequest strReq = new StringRequest(Request.Method.POST,
                 URL_FOR_All_Profiles_fetch, new Response.Listener<String>() {
 
@@ -152,6 +156,7 @@ public class DeleteProfile extends Fragment {
             protected Map<String, String> getParams() {
                 // Posting params to register url
                 Map<String, String> params = new HashMap<String, String>();
+                params.put("Did",UserId);
                 return params;
             }
         };
@@ -240,8 +245,8 @@ public class DeleteProfile extends Fragment {
                 holder = new ViewHolder();
                 convertView = inflater.inflate(R.layout.row, null);
                 holder.llContainer = (LinearLayout)convertView.findViewById(R.id.llContainer);
-                holder.tvId = (TextView) convertView.findViewById(R.id.tvEmail);
-                holder.tvName = (TextView) convertView.findViewById(R.id.tvEmail);
+                holder.tvId = (TextView) convertView.findViewById(R.id.tvName);
+                holder.tvName = (TextView) convertView.findViewById(R.id.tvName);
                 convertView.setTag(holder);
             } else {
                 holder = (ViewHolder) convertView.getTag();
